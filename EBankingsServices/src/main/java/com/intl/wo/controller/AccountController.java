@@ -11,6 +11,7 @@ import com.intl.wo.beans.Account;
 @RestController
 public class AccountController extends BaseController{
 	
+	@GetMapping("/accountSummary")
 	public ArrayList<Account> retrieveAccountList(){
 		ArrayList<Account> accounts = new ArrayList<>();
 		try {
@@ -29,6 +30,6 @@ public class AccountController extends BaseController{
 			accounts.add(record);
 		}
 		accountServices.addAccounts(accounts);
-		return accounts.toString();
+		return "Inserted accounts: " + accounts.size();
 	}
 }

@@ -1,14 +1,15 @@
 package com.intl.wo.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import com.intl.wo.services.AccountServices;
-import com.intl.wo.services.AccountServicesImpl;
 
 public class BaseController {
 
+	@Autowired
 	AccountServices accountServices;
 	
 	BaseController(){
-		accountServices = new AccountServicesImpl();
+		
 	}
 
 	public AccountServices getAccountServices() {

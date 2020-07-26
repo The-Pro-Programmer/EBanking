@@ -10,6 +10,7 @@ import javax.persistence.Table;
 public class Account {
 
 	@Id
+	@Column
 	private String accountNo;
 	@Column
 	private String accountName;
